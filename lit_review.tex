@@ -25,7 +25,7 @@
 \usepackage{amssymb}  % assumes amsmath package installed
 \usepackage{physics}
 \usepackage[backend=biber]{biblatex}
-
+\usepackage{mhchem}
 
 \title{\LARGE \bf
 Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
@@ -78,19 +78,38 @@ This electronic document is a ÒliveÓ template. The various components of your 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Exiton Polariton Condensates}
 
-\subsection{Phase transitions and critical points}
+\subsection{Phase Transitions and Critical Points}
 
-A wide range of physical systems can distinctly be described by few parameters on a macroscopic scale, despite often having a complex microscopic structure. Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's structure is quite distinct. Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region. A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. For example, the order parameter for ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature passed the Curie point and demagnetise the system.  
+A wide range of physical systems can distinctly be described by few parameters on a macroscopic scale, despite often having a complex microscopic structure. 
+Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's structure is quite distinct. 
+Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region.
+A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. 
+For example, the order parameter for ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature passed the Curie point and demagnetise the system.  
 
-Near criticality the analogies deepen as many properties of a system, such as heat capacities or susceptibilities, depend only the deviation from criticality and an exponent, known as a `critical exponent.' For instance, in a ferromagnet the magentic susceptibility $\chi= \pdv{M}{H}$ at zero field varies as $|t|^{-\gamma}$, for some constant $\gamma$, where $t = (T-T_c)/T_c$ is the reduced temperature. This defines the critical exponent $\gamma$, and in more general terms $\chi$ is derivative of the order parameter with respect to the source field. 
+Near criticality the analogies deepen as many properties of a system, such as heat capacities or susceptibilities, depend only the deviation from criticality and an exponent, known as a `critical exponent.' 
+For instance, in a ferromagnet the magnetic susceptibility $\chi= \pdv{M}{H}$ at zero field varies as $|t|^{-\gamma}$, for some constant $\gamma$, where $t = (T-T_c)/T_c$ is the reduced temperature. 
+This defines the critical exponent $\gamma$, and in more general terms $\chi$ is derivative of the order parameter with respect to the source field. 
 
-A quantity of crucial importance is the correlation length $\xi$ which provides a length scale at which the value of the system at one point deterimes the value of the system at another point. At criticality, this length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase. As the name implies the correlation length appears in the correlation functions the system posseses. For ferromagnetic systems, a common correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau,\myvec),{M}(\myvec{R}, t)}, where the brackets denote a thermal average. This measures the correlation between spins a distance $r$ and time $\tau$ away from each other. 
+A quantity of crucial importance is the correlation length $\xi$ which provides a length scale at which the value of the system at one point determines the value of the system at another point. 
+At criticality, this length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase. As the name implies the correlation length appears in the correlation functions the system possesses. 
+For ferromagnetic systems, a common correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau,\myvec),{M}(\myvec{R}, t)}$, where the brackets denote a thermal average. 
+This measures the correlation between spins a distance $r$ and time $\tau$ away from each other. 
 
-It is these similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable into behaviour of systems by studying much simpler models. The Ising model, consisting of a lattice of spins that can point up or down, or its generalisation to any direction in the $n$-vector model, have been studied extensively. 
+It is these similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable into behaviour of systems by studying much simpler models.
+The Ising model, consisting of a lattice of spins that can point up or down, or its generalisation to any direction in the $n$-vector model, have been studied extensively.  
  
 \subsection{Exiton Polariton Condensates}
 
-
+Another phenomenon of interest to physicists is that of condensation. 
+Below a critical temperature or above a critical density, a macroscopic number of particles occupy the ground state of a system. 
+Familiar examples include the superfluidity of \ce{^4He} and BCS (Bardeen-Cooper-Schrieffer) superconductivity.
+Exciton polaritons are a more recent of a system that undergoes condensation, although due to their non equilibrium nature there is greater subtlety involved.  
+The essential experimental apparatus consists of a thin semiconducting material with reflective Bragg mirrors on either side. 
+The material is illuminated with a laser, exciting an electron which becomes an exciton with the remaining hole. 
+Across the $z$ plane of the semiconductor the band gap varies through alternating doping. 
+This confines the excitons in the regions where the band gap is narrower, and the exciton is effectively only free to move in the $xy$ plane.
+Although the mirrors are not perfectly reflective, with the lifetime of the photons being in the range of 10-100ps in current experiments, if the rate of recombination and electron excitation exceeds that of photon dissipation, the excitons are able to couple with the photons. 
+This coupling can to good approximation lead to considering exciton and photon oscillator as a bosonic quasi particle known as polaritons.    
  
 
 
