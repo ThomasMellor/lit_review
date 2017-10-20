@@ -1,0 +1,258 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{IEEEtran}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{physics}
+\usepackage[backend=biber]{biblatex}
+\usepackage{mhchem}
+
+\title{\LARGE \bf
+Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{Huibert Kwakernaak$^{1}$ and Pradeep Misra$^{2}$% <-this % stops a space
+\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$H. Kwakernaak is with Faculty of Electrical Engineering, Mathematics and Computer Science,
+        University of Twente, 7500 AE Enschede, The Netherlands
+        {\tt\small h.kwakernaak at papercept.net}}%
+\thanks{$^{2}$P. Misra is with the Department of Electrical Engineering, Wright State University,
+        Dayton, OH 45435, USA
+        {\tt\small p.misra at ieee.org}}%
+}
+
+\newcommand{\mean}[1]{\left < #1 \right >}
+\newcommand{\myvec}[1]{\boldsymbol{#1}}
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+This electronic document is a ÒliveÓ template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exiton Polariton Condensates}
+
+\subsection{Phase Transitions and Critical Points}
+
+A wide range of physical systems can distinctly be described by few parameters on a macroscopic scale, despite often having a complex microscopic structure. 
+Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's structure is quite distinct. 
+Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region.
+A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. 
+For example, the order parameter for ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature passed the Curie point and demagnetise the system.  
+
+Near criticality the analogies deepen as many properties of a system, such as heat capacities or susceptibilities, depend only the deviation from criticality and an exponent, known as a `critical exponent.' 
+For instance, in a ferromagnet the magnetic susceptibility $\chi= \pdv{M}{H}$ at zero field varies as $|t|^{-\gamma}$, for some constant $\gamma$, where $t = (T-T_c)/T_c$ is the reduced temperature. 
+This defines the critical exponent $\gamma$, and in more general terms $\chi$ is derivative of the order parameter with respect to the source field. 
+
+A quantity of crucial importance is the correlation length $\xi$ which provides a length scale at which the value of the system at one point determines the value of the system at another point. 
+At criticality, this length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase. As the name implies the correlation length appears in the correlation functions the system possesses. 
+For ferromagnetic systems, a common correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau,\myvec),{M}(\myvec{R}, t)}$, where the brackets denote a thermal average. 
+This measures the correlation between spins a distance $r$ and time $\tau$ away from each other. 
+
+It is these similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable into behaviour of systems by studying much simpler models.
+The Ising model, consisting of a lattice of spins that can point up or down, or its generalisation to any direction in the $n$-vector model, have been studied extensively.  
+ 
+\subsection{Exiton Polariton Condensates}
+
+Another phenomenon of interest to physicists is that of condensation. 
+Below a critical temperature or above a critical density, a macroscopic number of particles occupy the ground state of a system. 
+Familiar examples include the superfluidity of \ce{^4He} and BCS (Bardeen-Cooper-Schrieffer) superconductivity.
+Exciton polaritons are a more recent of a system that undergoes condensation, although due to their non equilibrium nature there is greater subtlety involved.  
+The essential experimental apparatus consists of a thin semiconducting material with reflective Bragg mirrors on either side. 
+The material is illuminated with a laser, exciting an electron which becomes an exciton with the remaining hole. 
+Across the $z$ plane of the semiconductor the band gap varies through alternating doping. 
+This confines the excitons in the regions where the band gap is narrower, and the exciton is effectively only free to move in the $xy$ plane.
+Although the mirrors are not perfectly reflective, with the lifetime of the photons being in the range of 10-100ps in current experiments, if the rate of recombination and electron excitation exceeds that of photon dissipation, the excitons are able to couple with the photons. 
+This coupling can to good approximation lead to considering the oscillation of the exciton and photon as a bosonic quasi particle known as a polariton.    
+ 
+
+The lower polariton's dispersion is quadratic at low momentum but tends to the exciton dispersion with a point of inflection. 
+
+One can obtain a wide range of behaviour in the microcavity by varying the method of illumination. 
+The momenta of the created polaritons in the microcavity plane depends on the $\sin \theta$ where $\theta$ is the angle of the laser with respect to the plane. 
+To obtain a condensate where the zero momentum mode is macroscopically occupied, there a few standard methods, some of which we will describe, however in general they depend on the pump strength, and, after a level has been passed, accumulation of the low momentum states increases dramatically.
+One method is optical parametric amplification, where there the input is two light beams, a `pump' beam at a `magic angle' corresponding to the point of inflection of the lower polariton dispersion, and a `probe' beam at zero angle. 
+The probe beam stimulates scattering of two pump polaritons to one with zero momentum and one with high momentum and energy in a way that conserves energy and momentum. 
+The high momentum polariton then can decay to the lower momentum state via phonon emission.
+One may also achieve optical parametric oscillation, which does not require a probe beam, so that beyond a threshold pump power the density of the low and high momentum states increases.
+
+In the case of incoherent pumping the polaritons emitted phonons as described before, however due to the steep dispersion curve once the inflection point is crossed means that many phonons are needed. 
+This creates a `bottle-neck' effect around the inflection point where a high density of polaritons is built up. 
+At a sufficient polariton density, and by ensuring the polaritons are more exciton-like, polariton-polariton scattering can become dominant with the low and high momentum polaritons being created as before. 
+
+These techniques allow experimenters to observe a macroscopic occupation of the ground state. 
+Although superficially a Bose Einstein Condensate (BEC), due to the intrinsic non-equilibrium nature of drive dissipative systems (as a result of the independence of the drive and dissipation mechanisms), one cannot straightforwardly place the system in this category: the coherent light emitted by the polariton condensate in electron-hole recombination could also be interpreted as that action of a laser.  
+Due to these considerations, it is not fruitful to shoehorn the system into either extreme; rather we can place the system into one of several regimes depending on the parameters of the system. 
+
+For the case of macroscopic ground state occupation, we can consider a macroscopic wavefunction $\psi(r)$ of the system which becomes our order parameter. 
+Writing the wavefunction as $\sqrt{\rho(r) e^{i \theta (r)}}$ where $\rho$ is the (real) amplitude, we note that the condensate allows the existence of vortices, a topological defect. 
+Since the value of the phase restrict to $[0, 2 \pi]$, i.e. it is compact, the circulation defined by 
+\[
+\oint \nabla \theta \cdot \dd{\myvec{l}} 
+\]
+must have values restricted to $2\pi n$, where $n$ is an integer. 
+For cases of nonzero circulation, by continuously shrinking the loop we must maintain this circulation, implying that at a point the phase must take on all values from 0 to $2\pi$. 
+Therefore the amplitude of the wavefunction must be zero at this point.
+Vortices are crucial Berezinski-Kosterlitz-Thouless (BKT) physics which has underpinned much of condensed matter in low dimensions. 
+To obtain some intuition on the subject, we can use relatively simple arguments.
+An isotropic solution for the phase angle that supports vortices is $|\nabla \theta(r)| =1/r$. 
+The energy of the vortex is
+\[
+\tfrac12 \int |nabla \theta |^2 \dd r^2 \propto \log L
+\]
+where $L$ is the distance from the vortex, which we'll take as the system size. 
+The number of places to place the vortex will also be proportional to $L^2$, so the entropy ($k \log \Omega$, where $\Omega$ is the number of microstates) will be proportional to $\log L$ also. 
+The free energy $E - TS$ then shrinks or grows depending on the temperature, and there is a critical temperature where the formation of vortices is favourable. 
+This is the BKT temperature. 
+Due to the Mermin-Wagner theorem, for short range interacting two dimensional systems with a continuous symmetry, there exists no symmetry breaking phase. 
+For the XY model (the two dimensional $n$-vector model), the O(2) symmetry prevents an ordered phase, and the same is true of the polariton condensate. 
+Instead, the functional form of the correlation functional depends on which phase the system is in: in the high temperature phase there exists exponential decay of correlations $\propto \exp (-r / \xi)$. 
+At low temperatures the system displays `quasi long range order' and the decay is algebraic (i.e. depends on $r$ to some power).
+In both cases $r$ is the distance. 
+ 
+For two vortices a distance $R$ away from each other, the force they experience $-\dv*{E}{R} \propto 1/R$. 
+
+\subsection{Polariton Condensate Phases}
+
+Considering the fluctuations of the wavefunction about the mean in writing $\psi = (\sqrt{\rho} + \chi)e^{i \theta}$ it is found that in the long range limit the dynamics are solely governed by $\theta$ through the anisotropic Kadar-Parisi-Zhang (KPZ) equation:
+\[
+\pdv{\theta}{t} = D_x \pdv[2]{\theta}{x} + D_y \pdv[2]{\theta}{y} + \frac{\lambda_x}{2}\left ( \pdv[2]{\theta}{x} \right)^2 + \frac{\lambda_y}{2} \left (\pdv[2]{\theta}{y} \right)^2 + \eta
+\]
+where $\eta$ is a noise term. 
+The $D$s and $\lambda$s depend on the means at which the system is pumped. 
+In both the for both incoherently and coherently pumped systems, the equation is the same. 
+However, in the OPO regime $\theta$ is actually given by $\theta_s - \theta_i$, the subscripts stand for `signal' and `idler', corresponding to the low and high momentum states. 
+In this case the wavefunction is a linear combination of the 
+\end{document} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{IEEEtran}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{physics}
+\usepackage[backend=biber]{biblatex}
+\usepackage{mhchem}
+
+\title{\LARGE \bf
+Preparation of Papers for IEEE Sponsored Conferences \& Symposia*
+}
+
+%\author{ \parbox{3 in}{\centering Huibert Kwakernaak*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         Faculty of Electrical Engineering, Mathematics and Computer Science\\
+%         University of Twente\\
+%         7500 AE Enschede, The Netherlands\\
+%         {\tt\small h.kwakernaak@autsubmit.com}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Pradeep Misra**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{Huibert Kwakernaak$^{1}$ and Pradeep Misra$^{2}$% <-this % stops a space
+\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$H. Kwakernaak is with Faculty of Electrical Engineering, Mathematics and Computer Science,
+        University of Twente, 7500 AE Enschede, The Netherlands
+        {\tt\small h.kwakernaak at papercept.net}}%
+\thanks{$^{2}$P. Misra is with the Department of Electrical Engineering, Wright State University,
+        Dayton, OH 45435, USA
+        {\tt\small p.misra at ieee.org}}%
+}
+
+\newcommand{\mean}[1]{\left < #1 \right >}
+\newcommand{\myvec}[1]{\boldsymbol{#1}}
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+This electronic document is a ÒliveÓ template. The various components of your paper [title, text, heads, etc.] are already defined on the style sheet, as illustrated by the portions given in this document.
+
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Exiton Polariton Condensates}
+
+\subsection{Phase Transitions and Critical Points}
+
+A wide range of physical systems can distinctly be described by few parameters on a macroscopic scale, despite often having a complex microscopic structure. 
+Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's structure is quite distinct. 
+Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region.
+A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. 
