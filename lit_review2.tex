@@ -82,20 +82,21 @@ This electronic document is a ÒliveÓ template. The various components of your 
 
 A wide range of physical systems can distinctly be described by few parameters on a macroscopic scale, despite often having a complex microscopic structure. 
 Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's structure is quite distinct. 
+
 Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region.
 A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. 
-For example, the order parameter for ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature passed the Curie point and demagnetise the system.  
+For example, the order parameter for a ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature a pass the Curie point to demagnetise the system.  
 
 Near criticality the analogies deepen as many properties of a system, such as heat capacities or susceptibilities, depend only the deviation from criticality and an exponent, known as a `critical exponent.' 
 For instance, in a ferromagnet the magnetic susceptibility $\chi= \pdv{M}{H}$ at zero field varies as $|t|^{-\gamma}$, for some constant $\gamma$, where $t = (T-T_c)/T_c$ is the reduced temperature. 
 This defines the critical exponent $\gamma$, and in more general terms $\chi$ is derivative of the order parameter with respect to the source field. 
 
-A quantity of crucial importance is the correlation length $\xi$ which provides a length scale at which the value of the system at one point determines the value of the system at another point. 
-At criticality, this length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase. As the name implies the correlation length appears in the correlation functions the system possesses. 
-For ferromagnetic systems, a common correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau,\myvec),{M}(\myvec{R}, t)}$, where the brackets denote a thermal average. 
-This measures the correlation between spins a distance $r$ and time $\tau$ away from each other. 
+A quantity of crucial importance is the correlation length $\xi$. As the name implies, the correlation length appears in the correlation functions the system possesses which provide a length scale at which the value of the system at one point determines the value of the system at another point. 
+At criticality, the correlation length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase.  
+A typical correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau,\myvec),{M}(\myvec{R}, t)}$, where the brackets denote a thermal average. 
+This measures the of the $\myvec{M}$s at a distance $r$ and time $\tau$ away from each other. 
 
-It is these similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable into behaviour of systems by studying much simpler models.
+It is the similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable insight into the behaviour of systems by studying much simpler models.
 The Ising model, consisting of a lattice of spins that can point up or down, or its generalisation to any direction in the $n$-vector model, have been studied extensively.  
  
 \subsection{Exiton Polariton Condensates}
@@ -104,7 +105,7 @@ Another phenomenon of interest to physicists is that of condensation.
 Below a critical temperature or above a critical density, a macroscopic number of particles occupy the ground state of a system. 
 Familiar examples include the superfluidity of \ce{^4He} and BCS (Bardeen-Cooper-Schrieffer) superconductivity.
 Exciton polaritons are a more recent of a system that undergoes condensation, although due to their non equilibrium nature there is greater subtlety involved.  
-The essential experimental apparatus consists of a thin semiconducting material with reflective Bragg mirrors on either side. 
+The basic experimental set up consists of a thin semiconducting material with reflective Bragg mirrors on either side. 
 The material is illuminated with a laser, exciting an electron which becomes an exciton with the remaining hole. 
 Across the $z$ plane of the semiconductor the band gap varies through alternating doping. 
 This confines the excitons in the regions where the band gap is narrower, and the exciton is effectively only free to move in the $xy$ plane.
@@ -116,13 +117,13 @@ The lower polariton's dispersion is quadratic at low momentum but tends to the e
 
 One can obtain a wide range of behaviour in the microcavity by varying the method of illumination. 
 The momenta of the created polaritons in the microcavity plane depends on the $\sin \theta$ where $\theta$ is the angle of the laser with respect to the plane. 
-To obtain a condensate where the zero momentum mode is macroscopically occupied, there a few standard methods, some of which we will describe, however in general they depend on the pump strength, and, after a level has been passed, accumulation of the low momentum states increases dramatically.
+To obtain a condensate where a low momentum mode is macroscopically occupied, there a few standard methods, some of which we will describe, however in general they depend on the pump strength, and, after a level has been passed, accumulation of the low momentum states increases dramatically.
 One method is optical parametric amplification, where there the input is two light beams, a `pump' beam at a `magic angle' corresponding to the point of inflection of the lower polariton dispersion, and a `probe' beam at zero angle. 
-The probe beam stimulates scattering of two pump polaritons to one with zero momentum and one with high momentum and energy in a way that conserves energy and momentum. 
+The probe beam stimulates scattering of two pump polaritons to one with zero momentum and one with high momentum and energy, known as the signal and idler polaritons, respectively, in a way that conserves energy and momentum. 
 The high momentum polariton then can decay to the lower momentum state via phonon emission.
 One may also achieve optical parametric oscillation, which does not require a probe beam, so that beyond a threshold pump power the density of the low and high momentum states increases.
 
-In the case of incoherent pumping the polaritons emitted phonons as described before, however due to the steep dispersion curve once the inflection point is crossed means that many phonons are needed. 
+In the case of incoherent pumping the high momentum polaritons decay by emitting phonons as described before, however due to the steep dispersion curve at the $k=0$ state, once the inflection point is crossed this process becomes inefficient and many phonons are needed. 
 This creates a `bottle-neck' effect around the inflection point where a high density of polaritons is built up. 
 At a sufficient polariton density, and by ensuring the polaritons are more exciton-like, polariton-polariton scattering can become dominant with the low and high momentum polaritons being created as before. 
 
@@ -131,46 +132,71 @@ Although superficially a Bose Einstein Condensate (BEC), due to the intrinsic no
 Due to these considerations, it is not fruitful to shoehorn the system into either extreme; rather we can place the system into one of several regimes depending on the parameters of the system. 
 
 For the case of macroscopic ground state occupation, we can consider a macroscopic wavefunction $\psi(r)$ of the system which becomes our order parameter. 
-Writing the wavefunction as $\sqrt{\rho(r) e^{i \theta (r)}}$ where $\rho$ is the (real) amplitude, we note that the condensate allows the existence of vortices, a topological defect. 
+Writing the wavefunction as $\sqrt{\rho(r)} e^{i \theta (r)}}$ where $\rho$ is the (real) amplitude, we note that the condensate allows the existence of vortices, a topological defect.
+This means that we cannot continuously deform the state with vortices into the ground state, and thus this state cannot be obtained through perturbation theory methods.
+Nethertheless they are physically meaningful.  
 Since the value of the phase restrict to $[0, 2 \pi]$, i.e. it is compact, the circulation defined by 
 \[
 \oint \nabla \theta \cdot \dd{\myvec{l}} 
 \]
 must have values restricted to $2\pi n$, where $n$ is an integer. 
-For cases of nonzero circulation, by continuously shrinking the loop we must maintain this circulation, implying that at a point the phase must take on all values from 0 to $2\pi$. 
+In the case of non-zero circulation, by continuously shrinking the loop we must maintain this circulation, implying that at a point the phase must take on all values from 0 to $2\pi$. 
 Therefore the amplitude of the wavefunction must be zero at this point.
 Vortices are crucial Berezinski-Kosterlitz-Thouless (BKT) physics which has underpinned much of condensed matter in low dimensions. 
-To obtain some intuition on the subject, we can use relatively simple arguments.
-An isotropic solution for the phase angle that supports vortices is $|\nabla \theta(r)| =1/r$. 
-The energy of the vortex is
+To obtain some intuition on the subject, we can use relatively simple arguments: an isotropic solution for the phase angle that supports vortices is $|\nabla \theta(r)| =1/r$. 
+The energy of the vortex in the continuum limit of the $XY$ model is
 \[
-\tfrac12 \int |nabla \theta |^2 \dd r^2 \propto \log L
+\tfrac12 \int \nabla \theta |^2 \dd r^2 \propto \log L
 \]
 where $L$ is the distance from the vortex, which we'll take as the system size. 
-The number of places to place the vortex will also be proportional to $L^2$, so the entropy ($k \log \Omega$, where $\Omega$ is the number of microstates) will be proportional to $\log L$ also. 
+The number of places to place the vortex will also be proportional to $L^2$, so the entropy ($k \log \Omega$) will be proportional to $\log L$. 
 The free energy $E - TS$ then shrinks or grows depending on the temperature, and there is a critical temperature where the formation of vortices is favourable. 
-This is the BKT temperature. 
-Due to the Mermin-Wagner theorem, for short range interacting two dimensional systems with a continuous symmetry, there exists no symmetry breaking phase. 
-For the XY model (the two dimensional $n$-vector model), the O(2) symmetry prevents an ordered phase, and the same is true of the polariton condensate. 
+This is the BKT temperature.
+The high temperature, disordered phase is characterised by the unbinding and proliferation of these vortices.
+ 
+These two phases are not quite the same as those encountered in three dimensions in that there is no continuous symmetry breaking: this is disallowed for short range interacting with a continuous symmetry due to the Mermin-Wigner theorem. 
+For the XY model, a global $SO(2)$ symmetry prevents an ordered phase, and the same is true of the polariton condensate. 
 Instead, the functional form of the correlation functional depends on which phase the system is in: in the high temperature phase there exists exponential decay of correlations $\propto \exp (-r / \xi)$. 
 At low temperatures the system displays `quasi long range order' and the decay is algebraic (i.e. depends on $r$ to some power).
-In both cases $r$ is the distance. 
+Here $r$ is the distance in both cases. 
  
 For two vortices a distance $R$ away from each other, the force they experience $-\dv*{E}{R} \propto 1/R$. 
 
 \subsection{Polariton Condensate Phases}
 
-Considering the fluctuations of the wavefunction about the mean in writing $\psi = (\sqrt{\rho} + \chi)e^{i \theta}$ it is found that in the long range limit the dynamics are solely governed by $\theta$ through the anisotropic Kadar-Parisi-Zhang (KPZ) equation:
+Considering the fluctuations of the wavefunction about the mean in writing $\psi = (\sqrt{\rho} + \chi)e^{i \theta}$ it is found that in the long wavelength limit the dynamics are solely governed by $\theta$ through the anisotropic Kadar-Parisi-Zhang (KPZ) equation:
 \[
 \pdv{\theta}{t} = D_x \pdv[2]{\theta}{x} + D_y \pdv[2]{\theta}{y} + \frac{\lambda_x}{2}\left ( \pdv[2]{\theta}{x} \right)^2 + \frac{\lambda_y}{2} \left (\pdv[2]{\theta}{y} \right)^2 + \eta
 \]
 where $\eta$ is a noise term. 
 The $D$s and $\lambda$s depend on the means at which the system is pumped. 
-In both the for both incoherently and coherently pumped systems, the equation is the same. 
+In both incoherently and coherently pumped systems, the equation is the same. 
 However, in the OPO regime $\theta$ is actually given by $\theta_s - \theta_i$, the subscripts stand for `signal' and `idler', corresponding to the low and high momentum states.
 The pump phase $\theta_p$ is fixed by the laser, and the relation $2 \theta_p = \theta_i + \theta_s$ removes another degree of freedom, leaving just one.  
 In this case the wavefunction is a linear combination of each mode.
+The different regimes of the condensate can be parametrised by the scaled nonlinearity 
+\[
+g \equiv \lambda_x^2/D_x^2\sqrt{D_x D_y}
+\]
+and the scaled anisotropy 
+\[
+\Gamma \equiv \lambda_y D_x / \lambda_x D_y.
+\] 
+For the KPZ equation to be stable, the $D$s must be positive.
+The sign of the anisotropy therefore depends on the sign difference of the $\lambda$s. 
+The cases $\Gamma > 0$ and $\Gamma < 0$ are called the weak and strong anisotropic phase, respectively, and only their relative sign matters.
+BKT physics is reobtained when the non-linear terms vanish.
+
+For both incoherently and coherent driven systems renormalisation group analysis has been performed.
+The process essentially teases out long range behaviour by successive course graining and renormalising of the parameters. 
+This occurs when shrinking the coarse grained size back down to a system length scale, such as nearest neighbour distance.
+A `flow' of the parameters is thus obtained (essentially a phase portrait).
+Two regions are found: for strongly anisotropic systems the there is a fixed point at $g=0$ and $\Gamma = -1$ which as mentioned equilibrium-like BKT regimes. 
+For weak anisotropic systems the flow lines all tend to $g= \infinity$ and asymptotically approach the $\Gamma =1$ limit. 
+
+  
  
+
  
 \end{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
