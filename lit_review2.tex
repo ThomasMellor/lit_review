@@ -194,10 +194,67 @@ A `flow' of the parameters is thus obtained (essentially a phase portrait).
 Two regions are found: for strongly anisotropic systems the there is a fixed point at $g=0$ and $\Gamma = -1$ which as mentioned equilibrium-like BKT regimes. 
 For weak anisotropic systems the flow lines all tend to $g= \infinity$ and asymptotically approach the $\Gamma =1$ limit. 
 
-  
+In the case of incoherent pumping in the isotropic regime it is found that although in the thermodynamic limit the algebraic order will always be destroyed, the size $L^*$ to which a finite system can show algebraic correlation depends on a tuning parameter $x= \gamma_p / \gamma_l -1$ where the $\gamma$s are pump power and loss, respectively. 
+Algebraic correlations may be destroyed in one of two ways: for a sufficiently large tuning parameter and system, decreasing the tuning parameter increases the nonequilibrium fluctuations so that the system enters the KPZ phas marked by stretched exponential correlations. 
+Alternatively, a BKT transition may take place first. 
+This is illustrated in XXX. 
+It is noted that the KPZ length scale $L^*$ is much larger than realistic system sizes, and therefore may not be observed for incoherently pumped systems. 
+
+In systems with strong anisotropy there only exists a phase transition between the BKT and vortex phases.
+A phase diagram that illustrates is shown in XXX.
+In particular, the system exhibits `reentrance' which means that by increasing the pump power it is possible to enter into the algebraic regime, and then subsequently exit it on further increase.
+
+For coherent pumping another length scale $L_v$ above which vortex unbinding will occur. 
+This can be calculated by mapping the compact KPZ equation to a non-linear electrodynamic theory.
+A similar approach was taken in studying the BKT transition. 
+As we noted earlier, the force a vortex experience experience is $\propto 1/R$ where $R$ is the vortex-vortex distance. 
+Thus, in the $XY$ model, vortices can be mapped to coulombic charges. 
+In the case of the KPZ equation due to the non-linear term there are also repulsive terms along with the coulombic attractions. 
+Therefore in the case $\lambda \neq 0$, vortex unbinding will always occur. 
+
+The analogous analysis of the above in the case of coherent pumping (the OPO regime specifically) included this length.
+Coherent pumping displays similar phases as the incoherent pump, however in experimental realisations the various regimes can be explored much more easily with the available system size by varying the detuning, pump power, and pump wavevector. 
+
+\section{$XY$ model scaling violations}
+
+In XX the dynamical scaling of the $XY$ model was studied. 
+In particular, the system starting from two different initial conditions (zero and infinite temperature) was quench to the BKT critical temperature and the value and the Binder cumulant defined by 
+\[
+g_L(t) = 2 - \frac{\mean{\myvec{M}^2}^2}{\mean{M^4}}
+\]
+was studied at various system sizes $L$ where $\myvec{M}$ is the total magnetisation. 
+Monte Carlo dynamics was employed (using the Metropolis algorithm) and the mean is over independent Monte Carlo runs. 
+As explained the correlation length becomes infinite at the critical temperature in the thermodynamic limit. 
+However for a finite system this does not occur. 
+With the assumption that $\xi$ depends on the time since quench $t$ in some way, the Binder cumulant could be written as a function $f$ depending on $\xi$, but to account for the finite size of the system it actually depends on the ration of $\xi/L$.
+This is the finite size scaling. 
+Therefore when plotting $g$ as a function of this ratio, a collapse of the plots for different system sizes should occur, provided the dynamical scaling of $\xi(t)$ is correct. 
+
+The expected scaling $\xi \propto t^{1/z}$ where $z=2$ is an equilibrium exponent in fluctuations, held when quenching from the ordered state, however this required modification when quenching from the disordered phase by $\xi \propto (t/\ln t)^{1/2}$. 
+The interpretation was that the length scale $\xi$ could be substituted approximately by the vortex distance. 
+The friction in the vortex motion modify the dynamical scaling given.  
+
+\section{Project Proposal}
+
+The project aim is to study the dynamical scaling for various regimes in OPO polariton condensates. 
+Unlike the $XY$ model the vortices also contain repulsive contributions. 
+This will presumably alter contributions to scaling with extra or modified terms. 
+The terms that are there will also depend on which phase the system is initially prior to quenching and to which critical point it is quenched to. 
+In particular, scaling should reduce to that of the $XY$ model in the BKT phase.
+
+Due to the system being a non-equilibrium one, Monte Carlo dynamics are innapropriate.
+Instead, stochastic dynamics will be used. 
+This requires discretising the KPZ equation and insisting on compactness, as has been done in XX. The result is, for the isotropic KPZ equation, the prescription: 
+\[
+\nabla^2 \theta \to - \sum_{\myvec{a}} \sin ( \theta_{\myvec{x}} - \theta_{\myvec{x} + \myvec{a}}
+\]
+and
+\[
+(\nabla \theta )^2 \to - \sum_{\myvec{a}} ( \cos ( \theta_{\myvec{x}} - \theta_{\myvec{x} + \myvec{a}} - 1 )
+\]
+where the $\myvec{a}$ are the nearest neighbour distances.
  
 
- 
 \end{document} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %2345678901234567890123456789012345678901234567890123456789012345678901234567890
