@@ -1,0 +1,268 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{IEEEtran}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{graphicx}
+\usepackage{physics}
+\usepackage[backend=biber]{biblatex}
+\usepackage{mhchem}
+\usepackage[utf8]{inputenc}
+\usepackage{siunitx}
+\bibliography{lit_review2.bib}
+\title{\LARGE \bf
+Critical Properties of Driven-Dissipative Systems Through the KPZ Equation -- Review
+}
+
+
+\author{MSci Student: Thomas Mellor,
+
+		Supervisors: Dr Marzena Szyma\'{n}ska and Dr Alejandro Zamora        
+}
+
+\newcommand{\mean}[1]{\left < #1 \right >}
+\newcommand{\myvec}[1]{\boldsymbol{#1}}
+\newcommand{\fig}[1]{Fig. #1}
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Phase Transitions and Critical Points}
+
+A wide range of physical systems can distinctly be described with just a few parameters on a macroscopic scale, despite often having a complex microscopic structure \cite{binney1992the}. 
+Moreover, seemingly disparate systems such as ferromagnets or fluids exhibit similar mathematical descriptions with regards to their phases and transitions between phases: regions where the system's macroscopic structure is quite distinct. 
+
+Typically there exists a natural, so-called order parameter whose value is positive in an `ordered' region and zero in the `disordered' region.
+A critical point demarcates these two regions, and one crosses between them by varying one of the system's parameters. 
+For example, the order parameter for a ferromagnet would the average magnetisation. When the spins are aligned and the system can be considered `ordered', this is non-zero, however one may increase the temperature a pass the Curie point to demagnetise the system.  
+
+Near criticality the analogies deepen as many properties of a system, such as heat capacities or susceptibilities, depend only the deviation from criticality and an exponent, known as a `critical exponent.'  
+For instance, in a ferromagnet the magnetic susceptibility $\chi= \pdv{M}{H}$ at zero field varies as $|t|^{-\gamma}$, for some constant $\gamma$, where $t = (T-T_c)/T_c$ is the reduced temperature. 
+This defines the critical exponent $\gamma$, and in more general terms $\chi$ is derivative of the order parameter with respect to the source field. 
+
+A quantity of crucial importance is the correlation length $\xi$. As the name implies, the correlation length appears in the correlation functions the system possesses which provide a length scale at which the value of the system at one point and time determines the value of the system elsewhere. 
+At criticality, the correlation length is infinite, and it tends to zero as one moves further away from the critical point in the disordered phase.  
+A typical correlation function $C$ is defined by $C(r,\tau) = \mean{\myvec{M}(\myvec{R} + \myvec{r}, t+\tau),\myvec{M}(\myvec{R}, t)}$, where the brackets denote a thermal average. 
+This measures the of the $\myvec{M}$s at a distance $r$ and time $\tau$ away from each other. 
+
+It is the similarities between systems and the insensitivity of the microscopic structure to the  macroscopic description that allows physicists to group the systems according to their critical exponents and to glean valuable insight into the behaviour of systems by studying much simpler models.
+The Ising model, consisting of a lattice of spins that can point up or down, and its 2D generalisation for spins of any direction in the $XY$ model, have been studied extensively \cite{Gallavotti1972, 2005cond.mat.12356K}.  
+ 
+\subsection{Exiton Polariton Condensates}
+
+Another phenomenon of interest to physicists is that of condensation, where a macroscopic number of particles occupy the ground state of a system. 
+Familiar examples include Bose Einstein Condensation (BEC) of ultracold atoms \cite{1674-1056-24-5-050507} and BCS (Bardeen-Cooper-Schrieffer) superconductivity \cite{PhysRev.108.1175}.
+Exciton polaritons are a more recent of a system that undergoes condensation, although due to their non equilibrium nature there is greater subtlety involved \cite{Byrnes2014}.  
+
+The basic experimental set up consists of a thin semiconducting material with reflective Bragg mirrors on either side, illustrated in \fig{\ref{fig:exciton-polariton}}.  
+The material is illuminated with a laser, exciting an electron which becomes an exciton with the remaining hole. 
+Across the $z$ plane of the semiconductor the band gap varies through alternating doping. 
+This confines the excitons in the regions where the band gap is narrower, and the exciton is effectively only free to move in the $xy$ plane.
+Although the mirrors are not perfectly reflective, with the lifetime of the polaritons being limited to $\sim$\SI{200}{\pico\second} in current experiments \cite{ 2014arXiv1408.1680S}, if the rate of recombination and electron excitation exceeds that of photon dissipation, the excitons are able to couple with the photons\cite{doi:10.1080/00107514.2010.550120}. 
+This coupling can to good approximation lead to considering the oscillation of the exciton and photon as a bosonic quasi particle known as a polariton.    
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.4]{polaritonsystem.pdf}
+	\caption{The exciton-polariton microcavity.
+	Superconducting material of with an alternating band gap is sandwiched between Bragg mirrors. 
+	A laser illuminates the semiconducting material which creates excitons that are confined in a 2D plane due to the doping. 
+	With sufficient photon lifetime (not dissipating through the mirrors), the photons can couple with the exciton effectively becoming a quasi particle known as a exciton-polariton \cite{Byrnes2014}.}
+	\label{fig:exciton-polariton}
+\end{figure}
+
+
+The dispersion for the polariton is shown is in \fig{\ref{fig:polaritondispersion}}. The lower polariton's (LP in the figure) is quadratic at small momenta but has a point of inflection as you increase the momentum\cite{doi:10.1080/00107514.2010.550120}. 
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.3]{polaritondispersion.pdf}
+	\caption{A dispersion graph for the exciton-polariton system. The angle corresponds to the momentum of the polariton. LP and UP correspond to upper and lower polariton, respectively, and are the two eigenvalues for the Hamiltonian. Due to the photon's low effective mass compared to the exciton, the dispersion for the polariton is almost totally dependent on the photon dispersion. In experiments it is the LP modes that are become occupied. Its dispersion relation looks quadratic at low momentum but has a point inflection, tending to the exciton dispersion, at high momentum. \cite{doi:10.1080/00107514.2010.550120}}
+	\label{fig:polaritondispersion}
+\end{figure}
+
+One can obtain a wide range of behaviour in the microcavity by varying the method of illumination. 
+The momenta of the created polaritons in the microcavity plane depends on the $\sin \theta$ where $\theta$ is the angle of the laser with respect to the plane \cite{doi:10.1080/00107514.2010.550120}. 
+To obtain a condensate where a low momentum mode is macroscopically occupied, there a few standard methods, some of which we will describe, however in general they depend on the pump strength, and, after a level has been passed, accumulation of the low momentum states increases dramatically.
+One method is optical parametric amplification, where there the input is two light beams, a `pump' beam at a `magic angle' corresponding to the point of inflection of the lower polariton dispersion, and a `probe' beam at zero angle. 
+The probe beam stimulates scattering of two pump polaritons to one with zero momentum and one with high momentum and energy, known as the signal and idler polaritons, respectively, in a way that conserves energy and momentum. 
+The idler can then decay to the lower momentum state via phonon emission.
+One may also achieve optical parametric oscillation (OPO), which does not require a probe beam, so that beyond a threshold pump power the density of the low and high momentum states increases.
+This is illustrated in \fig{\ref{fig:opo}}.
+
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.45]{opo.pdf}
+	\caption{An illustration of optical parametric amplification/oscillation. A pump laser at a `magic angle' corresponding to the inflection point creates polaritons with this energy. 
+	By stimulating at the zero momentum state with a probe laser, polariton-polariton scattering can occur to a high and low momentum polariton pair, known as the idler and signal, respectively. 
+By stimulating at the zero momentum state with a probe laser, polariton-polariton scattering can occur to a high and low momentum polariton pair, known as the idler and signal, respectively.
+The idler can then emit phonons and decay to the inflection point.
+	OPO is similar except it does not require a probe laser. \cite{doi:10.1080/00107514.2010.550120}}
+	\label{fig:opo}
+\end{figure}
+In the case of incoherent pumping the high momentum polaritons decay by emitting phonons as described before, however due to the steep dispersion curve at the $k=0$ state, once the inflection point is crossed this process becomes inefficient and many phonons are needed. 
+This creates a `bottle-neck' effect around the inflection point where a high density of polaritons is built up. 
+At a sufficient polariton density, and by ensuring the polaritons are more exciton-like, polariton-polariton scattering can become dominant with the low and high momentum polaritons being created as before. 
+
+These techniques allow experimenters to observe a BEC, for example in \cite{PhysRevLett.118.016602}, and illustated in \fig{\ref{fig:polariton-condesation}}. 
+In general, however, condesation is not necessarily indicative of the system being a BEC. 
+Various regimes are possible where the system behaves more like a laser, a distinctly non-equilibrium system, or like a BEC as above.
+It is thus most fruitful to consider the system as lying somewhere on a spectrum from the laser of BEC system \cite{Byrnes2014}. 
+\begin{figure}[htbp!]
+	\centering
+	\includegraphics[scale=0.5]{polaritoncondensation.pdf}
+	\caption{From \cite{PhysRevLett.118.016602}, the energy distribution of polaritons at two detunings $\delta$ (which is the energy difference between the cavity resonance and exciton energy at $k=0$) and various pump powers, shown here as going from blue to red. For zero detuning at a sufficient pump power distribution unambiguously points to Bose-Einstein statistics.}
+	\label{fig:polariton-condesation}
+\end{figure}
+For the case of macroscopic ground state occupation, we can consider a macroscopic wavefunction $\psi(r)$ of the system which becomes our order parameter. 
+Writing the wavefunction as $\sqrt{\rho(r)} e^{i \theta (r)}$ where $\rho$ is the (real) amplitude, we note that the condensate allows the existence of vortices, a topological defect.
+This means that we cannot continuously deform the state with vortices into the ground state, and thus this state cannot be obtained through perturbation theory methods.
+Nethertheless they are physically meaningful.  
+Since the value of the phase restrict to $[0, 2 \pi]$, i.e. it is compact, the circulation defined by 
+\[
+\oint \nabla \theta \cdot \dd{\myvec{l}} 
+\]
+must have values restricted to $2\pi n$, where $n$ is an integer. 
+In the case of non-zero circulation, by continuously shrinking the loop we must maintain this circulation, implying that at a point the phase must take on all values from 0 to $2\pi$. 
+Therefore the amplitude of the wavefunction must be zero at this point.
+Vortices are crucial Berezinski-Kosterlitz-Thouless (BKT) physics which has underpinned much of condensed matter in low dimensions. 
+To obtain some intuition on the subject, we can use relatively simple arguments: an isotropic solution for the phase angle that supports vortices is $|\nabla \theta(r)| =1/r$. 
+The energy of the vortex in the continuum limit of the $XY$ model is
+\[
+\tfrac12 \int \nabla \theta |^2 \dd r^2 \propto \log L
+\]
+where $L$ is the distance from the vortex, which we'll take as the system size. 
+The number of places to place the vortex will also be proportional to $L^2$, so the entropy ($k \log \Omega$) will be proportional to $\log L$. 
+The free energy $E - TS$ then shrinks or grows depending on the temperature, and there is a critical temperature where the formation of vortices is favourable. 
+This is the BKT temperature.
+The high temperature, disordered phase is characterised by the unbinding and proliferation of these vortices.
+ 
+These two phases are not quite the same as those encountered in three dimensions in that there is no continuous symmetry breaking: this is disallowed for short range interacting with a continuous symmetry due to the Mermin-Wigner theorem. 
+For the XY model, a global $SO(2)$ symmetry prevents an ordered phase, and the same is true of the polariton condensate. 
+Instead, the functional form of the correlation functional depends on which phase the system is in: in the high temperature phase there exists exponential decay of correlations $\propto \exp (-r / \xi)$. 
+At low temperatures the system displays `quasi long range order' and the decay is algebraic (i.e. depends on $r$ to some power).
+Here $r$ is the distance in both cases. 
+ 
+For two vortices a distance $R$ away from each other, the force they experience $-\dv*{E}{R} \propto 1/R$. 
+
+\subsection{Polariton Condensate Phases}
+
+Considering the fluctuations of the wavefunction about the mean in writing $\psi = (\sqrt{\rho} + \chi)e^{i \theta}$ it is found that in the long wavelength limit the dynamics are solely governed by $\theta$ through the anisotropic Kadar-Parisi-Zhang (KPZ) equation:
+\[
+\pdv{\theta}{t} = D_x \pdv[2]{\theta}{x} + D_y \pdv[2]{\theta}{y} + \frac{\lambda_x}{2}\left ( \pdv[2]{\theta}{x} \right)^2 + \frac{\lambda_y}{2} \left (\pdv[2]{\theta}{y} \right)^2 + \eta
+\]
+where $\eta$ is a noise term. 
+The $D$s and $\lambda$s depend on the means at which the system is pumped. 
+In both incoherently and coherently pumped systems, the equation is the same. 
+However, in the OPO regime $\theta$ is actually given by $\theta_s - \theta_i$, the subscripts stand for `signal' and `idler', corresponding to the low and high momentum states.
+The pump phase $\theta_p$ is fixed by the laser, and the relation $2 \theta_p = \theta_i + \theta_s$ removes another degree of freedom, leaving just one.  
+In this case the wavefunction is a linear combination of each mode.
+The different regimes of the condensate can be parametrised by the scaled nonlinearity 
+\[
+g \equiv \lambda_x^2/D_x^2\sqrt{D_x D_y}
+\]
+and the scaled anisotropy 
+\[
+\Gamma \equiv \lambda_y D_x / \lambda_x D_y.
+\] 
+For the KPZ equation to be stable, the $D$s must be positive.
+The sign of the anisotropy therefore depends on the sign difference of the $\lambda$s. 
+The cases $\Gamma > 0$ and $\Gamma < 0$ are called the weak and strong anisotropic phase, respectively, and only their relative sign matters.
+BKT physics is reobtained when the non-linear terms vanish.
+
+For both incoherently and coherent driven systems renormalisation group analysis has been performed.
+The process essentially teases out long range behaviour by successive course graining and renormalising of the parameters. 
+This occurs when shrinking the coarse grained size back down to a system length scale, such as nearest neighbour distance.
+A `flow' of the parameters is thus obtained (essentially a phase portrait).
+Two regions are found: for strongly anisotropic systems the there is a fixed point at $g=0$ and $\Gamma = -1$ which as mentioned equilibrium-like BKT regimes. 
+For weak anisotropic systems the flow lines all tend to $g= \infty$ and asymptotically approach the $\Gamma =1$ limit. 
+
+In the case of incoherent pumping in the isotropic regime it is found that although in the thermodynamic limit the algebraic order will always be destroyed, the size $L^*$ to which a finite system can show algebraic correlation depends on a tuning parameter $x= \gamma_p / \gamma_l -1$ where the $\gamma$s are pump power and loss, respectively. 
+Algebraic correlations may be destroyed in one of two ways: for a sufficiently large tuning parameter and system, decreasing the tuning parameter increases the nonequilibrium fluctuations so that the system enters the KPZ phas marked by stretched exponential correlations. 
+Alternatively, a BKT transition may take place first. 
+This is illustrated in XXX. 
+It is noted that the KPZ length scale $L^*$ is much larger than realistic system sizes, and therefore may not be observed for incoherently pumped systems. 
+
+In systems with strong anisotropy there only exists a phase transition between the BKT and vortex phases.
+A phase diagram that illustrates is shown in XXX.
+In particular, the system exhibits `reentrance' which means that by increasing the pump power it is possible to enter into the algebraic regime, and then subsequently exit it on further increase.
+
+For coherent pumping another length scale $L_v$ above which vortex unbinding will occur. 
+This can be calculated by mapping the compact KPZ equation to a non-linear electrodynamic theory.
+A similar approach was taken in studying the BKT transition. 
+As we noted earlier, the force a vortex experience experience is $\propto 1/R$ where $R$ is the vortex-vortex distance. 
+Thus, in the $XY$ model, vortices can be mapped to coulombic charges. 
+In the case of the KPZ equation due to the non-linear term there are also repulsive terms along with the coulombic attractions. 
+Therefore in the case $\lambda \neq 0$, vortex unbinding will always occur. 
+
+The analogous analysis of the above in the case of coherent pumping (the OPO regime specifically) included this length.
+Coherent pumping displays similar phases as the incoherent pump, however in experimental realisations the various regimes can be explored much more easily with the available system size by varying the detuning, pump power, and pump wavevector. 
+
+\section{$XY$ model scaling violations}
+
+In XX the dynamical scaling of the $XY$ model was studied. 
+In particular, the system starting from two different initial conditions (zero and infinite temperature) was quench to the BKT critical temperature and the value and the Binder cumulant defined by 
+\[
+g_L(t) = 2 - \frac{\mean{\myvec{M}^2}^2}{\mean{M^4}}
+\]
+was studied at various system sizes $L$ where $\myvec{M}$ is the total magnetisation. 
+Monte Carlo dynamics was employed (using the Metropolis algorithm) and the mean is over independent Monte Carlo runs. 
+As explained the correlation length becomes infinite at the critical temperature in the thermodynamic limit. 
+However for a finite system this does not occur. 
+With the assumption that $\xi$ depends on the time since quench $t$ in some way, the Binder cumulant could be written as a function $f$ depending on $\xi$, but to account for the finite size of the system it actually depends on the ration of $\xi/L$.
+This is the finite size scaling. 
+Therefore when plotting $g$ as a function of this ratio, a collapse of the plots for different system sizes should occur, provided the dynamical scaling of $\xi(t)$ is correct. 
+
+The expected scaling $\xi \propto t^{1/z}$ where $z=2$ is an equilibrium exponent in fluctuations, held when quenching from the ordered state, however this required modification when quenching from the disordered phase by $\xi \propto (t/\ln t)^{1/2}$. 
+The interpretation was that the length scale $\xi$ could be substituted approximately by the vortex distance. 
+The friction in the vortex motion modify the dynamical scaling given.  
+
+\section{Project Proposal}
+
+The project aim is to study the dynamical scaling for various regimes in OPO polariton condensates. 
+Unlike the $XY$ model the vortices also contain repulsive contributions. 
+This will presumably alter contributions to scaling with extra or modified terms. 
+The terms that are there will also depend on which phase the system is initially prior to quenching and to which critical point it is quenched to. 
+In particular, scaling should reduce to that of the $XY$ model in the BKT phase.
+
+Due to the system being a non-equilibrium one, Monte Carlo dynamics are innapropriate.
+Instead, stochastic dynamics will be used. 
+This requires discretising the KPZ equation and insisting on compactness, as has been done in XX. The result is, for the isotropic KPZ equation, the prescription: 
+\[
+	\nabla^2 \theta \to - \sum_{\myvec{a}} \sin ( \theta_{\myvec{x}} - \theta_{\myvec{x} + \myvec{a}})
+\]
+and
+\[
+(\nabla \theta )^2 \to - \sum_{\myvec{a}} ( \cos ( \theta_{\myvec{x}} - \theta_{\myvec{x} + \myvec{a}} - 1 )
+\]
+where the $\myvec{a}$ are the nearest neighbour distances.
+\printbibliography
+\end{document} 
